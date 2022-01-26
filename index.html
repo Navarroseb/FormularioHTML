@@ -13,108 +13,117 @@
     <title>Formulario HTML5</title>
 </head>
 
-<body class="body p-5">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="card rounded w-100">
-                <div class="card-header">
-                    <h2>Payment form example</h2>
-                </div>
-                <div class="card-body">
-                    <div class="alert alert-danger p-2 mt-4" role="alert">
-                        Some fields are missing
+<body>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 py-5">
+                    <form id="paymentForm">
+                        <div class="card">
+                           <div class="card-header">
+                                <h1 class="card-title">
+                                    Payment form example
+                                </h1>
+                            </div>
+                             <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="alert alert-danger p-2 mt-4" role="alert">
+                                                Some fields are missing
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="mb-3">
+                                                <label for="card" class="form-label">Card #</label>
+                                                <input type="text" class="form-control" id="card" name="card"
+                                                    placeholder="XXXXXXXXXXXXXXXX">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="mb-3">
+                                                <label for="cvc" class="form-label">CVC #</label>
+                                                <input type="text" class="form-control" id="cvc" name="cvc" placeholder="000">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="amount" class="form-label">Amount</label>
+                                                <input type="text" class="form-control" id="amount" name="amount" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="firstname" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="name" name="firstname">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="lastname" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="lastname" name="lastname">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="class mb-3">
+                                            <label for="city" class="form-label">City</label>
+                                            <input type="text" class="form-control" id="city" name="city">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="class mb-3">
+                                            <label for="state" class="form-label">State</label>
+                                            <select id="Select" class="form-select" id="state" name="state">
+                                                    <option>Pick a state</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="class mb-3">
+                                            <label for="postal code" class="form-label">Postal Code</label>
+                                            <input type="number" class="form-control" id="postal code" name="postal code">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 form-check">
+                                        <div class="class mb-3">
+                                        <p>We accept:</p>
+                                            <div class="checkbox bg-secondary w-50 text-white">
+                                                <i class="far fa-credit-card">
+                                                    <input type="radio" id="contactChoice1" name="contact" value="email">
+                                                    <label for="contactChoice1"></label></i>
+                                                <i class="fab fa-bitcoin">
+                                                    <input type="radio" id="contactChoice2" name="contact" value="phone">
+                                                    <label for="contactChoice2"></label></i>
+                                                <i class="fab fa-cc-paypal">
+                                                    <input type="radio" id="contactChoice3" name="contact" value="mail">
+                                                    <label for="contactChoice3"></label></i>
+                                                <i class="fab fa-apple-pay">
+                                                    <input type="radio" id="contactChoice1" name="contact" value="email">
+                                                    <label for="contactChoice1"></label></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="class mb-3">
+                                            <label for="message" class="form-label">Message</label>
+                                            <textarea id="disabledTextInput" class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                               </div>
+                        </div>
+                        <div class="card-footer bg bg-light col-12 p-2 d-flex justify-content-end">
+                            <button type="submit" class="btn btn-secondary mx-1">Cancel</button>
+                            <button type="submit" class="btn btn-primary mx-1">Send</button>
+                        </div>
                     </div>
-                    <div class="row">
-                        <div class="col-5">
-                            <label for="exampleInputEmail1" class="form-label text-secondary">Card #</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <label for="exampleInputEmail1" class="form-label text-secondary">CVC #</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <label for="exampleInputEmail1" class="form-label text-secondary">Amount</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <label for="exampleInputEmail1" class="form-label text-secondary">First Name</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <label for="exampleInputEmail1" class="form-label text-secondary">Last Name</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <label for="exampleInputEmail1" class="form-label text-secondary">City</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <label for="Select" class="form-label text-secondary">State</label>
-                            <select id="Select" class="form-select">
-                                <option>Pick a state</option>
-                            </select>
-                        </div>
-                        <div class="col-3">
-                            <label for="exampleInputEmail1" class="form-label text-secondary">Postal Code</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 form-check">
-                            <p>We accept:</p>
-                            <div class="checkbox bg-secondary w-50 text-white">
-                                <i class="far fa-credit-card">
-                                    <input type="radio" id="contactChoice1" name="contact" value="email">
-                                    <label for="contactChoice1"></label></i>
-                                <i class="fab fa-bitcoin">
-                                    <input type="radio" id="contactChoice2" name="contact" value="phone">
-                                    <label for="contactChoice2"></label></i>
-                                <i class="fab fa-cc-paypal">
-                                    <input type="radio" id="contactChoice3" name="contact" value="mail">
-                                    <label for="contactChoice3"></label></i>
-                                <i class="fab fa-apple-pay">
-                                    <input type="radio" id="contactChoice1" name="contact" value="email">
-                                    <label for="contactChoice1"></label></i>
-                            </div>
-
-                        </div>
-
-                        <div class="col-6">
-                            <label for="disabledTextInput" class="form-label p-2">Message</label>
-                            <textarea id="disabledTextInput" class="form-control" rows="3"></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer bg bg-light col-12 p-2 d-flex justify-content-end">
-                    <button type="submit" class="btn btn-secondary mx-1">Cancel</button>
-                    <button type="submit" class="btn btn-primary mx-1">Send</button>
-                </div>
+                </form>
             </div>
         </div>
     </div>
